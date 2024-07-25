@@ -7,7 +7,7 @@ import { TwitterOutline } from "@emotion-icons/evaicons-outline/TwitterOutline";
 
 function Footer(){
     return (
-        <Box as="footer" bg="purple.400" >
+        <Box as="footer" bg="#5da0cc" marginTop="auto">
             {/* Flex Div that contains all the footer's content */}
             <Flex 
                 flexWrap="wrap" 

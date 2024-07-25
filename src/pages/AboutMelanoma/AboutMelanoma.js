@@ -63,7 +63,7 @@ const cardItems = [
 
 function AboutMelanoma() {
   return (
-    <Container maxWidth="4xl" as="main">
+    <Container maxWidth="4xl" as="main" marginBottom="2rem">
     <Breadcrumbs 
       items={[
           { label: 'Home', path: '/' }

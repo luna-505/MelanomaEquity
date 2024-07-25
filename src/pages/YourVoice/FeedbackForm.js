@@ -2,24 +2,8 @@ import React from "react";
 import { Container, Heading, Text, Box, FormControl, FormLabel, Input, Textarea, Button, Stack, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper } from "@chakra-ui/react";
 
 function FeedbackForm() {
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const formData = new FormData(e.target);
-
-    //     // Basic client-side validation
-    //     const sanitizeInput = (input) => input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-    //     const sanitizedData = {};
-    //     for (const [key, value] of formData.entries()) {
-    //         sanitizedData[key] = sanitizeInput(value);
-    //     }
-
-    //     // Handle form submission logic here
-    //     console.log(sanitizedData);
-    // };
-
     return (
-        <Container maxW="5xl" mt="2rem">
+        <Container mt="2rem">
             <Heading mb="1rem">Feedback Form</Heading>
             <Text mb="1rem">We value your feedback. Please let us know your thoughts or suggestions.</Text>
             <Box as="form" method="post" action="https://formspree.io/f/mrbzeldq" >

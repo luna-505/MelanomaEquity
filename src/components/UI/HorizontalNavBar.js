@@ -14,7 +14,7 @@ const navItems = [
 function HorizontalNavBar() {
   return (
     <Flex as="nav" 
-      bg="#382c6e"
+      bg="#4591C4"
       width="100%" 
       backdropFilter="blur(4rem)" 
       boxShadow="0 0 4rem rgba(0, 0, 0, 0.2)">
@@ -34,37 +34,15 @@ function HorizontalNavBar() {
         listStyleType="none" 
         width="100%" 
         alignItems="center">
-          {/* All About Melanoma links list */}
-          {/* <Box as="li">
-            <Menu >
-              <MenuButton 
-                as={Button} 
-                rightIcon={<ChevronDownIcon />}
-                bg="blue.500" 
-                color="white" 
-                _hover={{  color: "blue.600" }}
-                _active={{ color: "blue.600" }}
-              >
-                All About Melanoma
-              </MenuButton>
-                <MenuList>
-                  <MenuItem><NavLink to="/about-melanoma">View All</NavLink></MenuItem>
-                  <MenuItem>What is it?</MenuItem>
-                  <MenuItem>Risk Factors & Statistics</MenuItem>
-                  <MenuItem>Prevention</MenuItem>
-                </MenuList>
-            </Menu>
-          </Box> */}
-
         {/* Dectection tool, Resources & Your Voice! links */}
         {navItems.map((item, index) => (
           <Box 
             as="li" 
             p="0 1rem" 
             key={index} color="white" 
-            _hover={{ color: "blue.600" }}
+            _hover={{ color: "orange.300" }}
             _active={{ color: "blue.400" }}>
-            <NavLink to={item.path}>{item.label}</NavLink>
+            <NavLink to={item.path} style={{ fontWeight: 'bold' }}>{item.label}</NavLink>
           </Box>
         ))}
       </HStack>

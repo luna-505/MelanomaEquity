@@ -50,7 +50,7 @@ function SideNavBar() {
   return (
     <>
       {/* NavBar on top*/}
-      <Flex width="100vw" height="100%" bg="blue.500" display="grid" gridTemplateColumns="repeat(5, 1fr)" alignItems="center">
+      <Flex width="100vw" height="100%" bg="#4591C4" display="grid" gridTemplateColumns="repeat(5, 1fr)" alignItems="center">
         {/* Logo Image  */}
         <NavLink exact to='/'>
         <Image src={Logo} alt="Logo" width="6rem" p="0.5rem" cursor="pointer" />
@@ -61,7 +61,7 @@ function SideNavBar() {
           icon={<HamburgerIcon boxSize={8} />}
           gridColumnStart={5}
           borderRadius="50%"
-          bgColor="blue.500"
+          bgColor="#4591C4"
           height="4rem"
           width="4rem"
           justifySelf="end"
@@ -81,17 +81,17 @@ function SideNavBar() {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent bg="blue.500">
+        <DrawerContent bg="#4591C4">
         <DrawerCloseButton css={closeButtonStyles} />   
 
           {/* Menu List containter */}
-          <DrawerBody padding="3rem" marginTop="5rem" color="white">
+          <DrawerBody padding="3rem" marginTop="5rem" color="white" fontWeight="bold">
           <VStack spacing="2.5rem">
             {/* Other page links */}
-            <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/" onClick={onClose}>Home</NavLink></Box>
-            <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/about-melanoma" onClick={onClose}>All About Melanoma</NavLink></Box>
-            <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/detection" onClick={onClose}>Detection Tools</NavLink></Box>
-            <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/your-voice" onClick={onClose}>Your Voice!</NavLink></Box>   
+            <Box _hover={{ color: "orange.300" }} _active={{ color: "blue.400" }}><NavLink to="/" onClick={onClose}>Home</NavLink></Box>
+            <Box _hover={{ color: "orange.300" }} _active={{ color: "blue.400" }}><NavLink to="/about-melanoma" onClick={onClose}>All About Melanoma</NavLink></Box>
+            <Box _hover={{ color: "orange.300" }} _active={{ color: "blue.400" }}><NavLink to="/detection" onClick={onClose}>Detection Tools</NavLink></Box>
+            <Box _hover={{ color: "orange.300" }} _active={{ color: "blue.400" }}><NavLink to="/your-voice" onClick={onClose}>Your Voice!</NavLink></Box>   
           </VStack>  
           </DrawerBody>
         </DrawerContent>

@@ -4,11 +4,11 @@ import { Box, Container, Heading, Text, Divider } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter, SimpleGrid, Button, Image, Center } from '@chakra-ui/react'
 // import components
 import { NavLink } from "react-router-dom";
-
 // Import images 
 import IconInfo from '../../assets/images/IconInfo.png'
 import IconDetect from '../../assets/images/IconDetect.png'
 import IconVoice from '../../assets/images/IconVoice.png'
+import SunBG from '../../assets/images/SunBg.png'
 
 function Home() {
   return (
@@ -33,7 +33,7 @@ function Home() {
       </Box>
       <Divider/>
       {/* --PURPOSE SECTION-- */}
-      <Container p="3rem" textAlign="center">
+      <Container p="3rem" >
         <Heading as="h2" size="lg" >
           Why Melanoma Equity?
         </Heading>

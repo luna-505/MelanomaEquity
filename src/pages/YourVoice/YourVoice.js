@@ -38,7 +38,7 @@ function YourVoice() {
       <Box  
         width="90%" 
         p="3rem"
-        bgColor="blue.200"
+        bgColor="#ff914d"
         ml="auto"
         mr="auto"
         mt="2rem"
