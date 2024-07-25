@@ -1,8 +1,9 @@
 import React from 'react';
-import { Heading, Text, Highlight } from '@chakra-ui/react';
+import { Heading, Text, Highlight, Box } from '@chakra-ui/react';
 
-const Section = ({ titleH2, titleH3, text, highlights = [] }) => (
-  <>
+const Section = ({ id, titleH2, titleH3, text, highlights = [] }) => {
+  return (
+    <Box id={id}>
     {titleH2 && <Heading as="h2" pt="0.5rem">{titleH2}</Heading>}
     {titleH3 && <Heading as="h3" pt="0.5rem" fontSize="lg">{titleH3}</Heading>}
     <Text pt="0.7rem" pb="0.7rem">
@@ -17,7 +18,8 @@ const Section = ({ titleH2, titleH3, text, highlights = [] }) => (
         text
       )}
     </Text>
-  </>
-);
+    </Box>
+  )
+}
 
 export default Section;

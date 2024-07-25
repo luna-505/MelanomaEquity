@@ -5,7 +5,11 @@ function ImageSubmissionForm() {
   return (
     <Container>
       <Heading>Image Submission Form</Heading>
-      <form method="post" action="https://formspree.io/f/xpwaqlez">
+      <form 
+        method="post" 
+        action="https://formspree.io/f/xpwaqlez" 
+        // enctype="multipart/form-data"
+      >
         {/* Introduction */}
         <Text mt={4}>
           Please use this form to submit images related to melanoma. Your contributions will help us improve our resources.
@@ -25,11 +29,11 @@ function ImageSubmissionForm() {
 
         {/* Image Upload */}
         <Box mt={4}>
-          <FormControl>
+          <FormControl isRequired>
             <FormLabel fontWeight="bold">Upload Images</FormLabel>
             <Input type="file" name="images" multiple />
           </FormControl>
-          <FormControl mt={4}>
+          <FormControl mt={4} isRequired>
             <FormLabel fontWeight="bold">Image Description</FormLabel>
             <Textarea name="description" resize="vertical" />
           </FormControl>
@@ -37,10 +41,10 @@ function ImageSubmissionForm() {
 
         {/* Consent and Permissions */}
         <Box mt={4}>
-          <FormControl>
+          <FormControl isRequired>
             <Checkbox name="rights">I confirm that I have the rights to share these images.</Checkbox>
           </FormControl>
-          <FormControl mt={2}>
+          <FormControl mt={2} isRequired>
             <Checkbox name="consent">I consent to the use of these images for research and educational purposes.</Checkbox>
           </FormControl>
         </Box>

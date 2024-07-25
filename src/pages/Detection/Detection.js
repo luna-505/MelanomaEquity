@@ -1,8 +1,7 @@
 import React from "react";
+import { Container, Heading, Text, Box, Button, Flex } from "@chakra-ui/react";
+import { NavLink, Outlet } from "react-router-dom";
 import Breadcrumbs from "../../components/UI/Breadcrumbs";
-import { Container, Heading, Text, Box } from "@chakra-ui/react";
-import DetectModel from './TeachableMachine';
-import SelfExaminationGuide from "./SelfExaminationGuide";
 import TableOfContents from "../../components/UI/TOC";
 
 function Detection() {
@@ -12,29 +11,24 @@ function Detection() {
   ];
 
   return (
-    <Container maxWidth="5xl" as="main">
-      {/* ----- PAGE'S BREADCRUMBS----- */}
-      <Breadcrumbs 
-        items={[
-          { label: 'Home', path: '/' }
-        ]} 
-        currentPage="Detection Tool" 
-      />      
+    <Container maxWidth="4xl" as="main" lineHeight="2">
       {/* PAGE'S TITLE & OVERVIEW */}
-      <Heading textAlign="center" p="2rem">Detection Tool</Heading>
-      <Text border="0.2rem" bgColor="yellow.100" p="0.5rem">
+      <Heading as="h1" textAlign="center" p="0.7rem">Detection Tool</Heading>
+      <Text mt="0.5rem">
         Early detection is crucial in combating melanoma. Regularly monitoring your skin and noting any changes can help identify issues that may require medical attention. This tool is designed to assist you in performing a self-examination and uploading images of any suspicious moles for analysis. Our machine learning model will provide an initial assessment to help you determine if a mole might be benign or malignant.
       </Text>
-      <Box p="4">
-        <TableOfContents sections={sections} />
-      </Box>
 
-      <Box id="self-examination" mt="4">
-        <SelfExaminationGuide />
-      </Box>
+      <Flex gap={4} mt={4} justifyContent="center">
+        <NavLink to="self-examination-guide">
+          <Button >Self Examination Guide</Button>
+        </NavLink>
+        <NavLink to="detect-machine">
+          <Button>Detect Model</Button>
+        </NavLink>
+      </Flex>
 
-      <Box id="detection-model" mt="4">
-        <DetectModel />
+      <Box mt="2rem" mb="2rem">
+        <Outlet />
       </Box>
     </Container>
   );

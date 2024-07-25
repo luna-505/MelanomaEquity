@@ -20,17 +20,17 @@ function YourVoice() {
   };
 
   return (
-    <Container maxWidth="5xl" as="main">
+    <Container maxWidth="4xl" as="main" lineHeight="2">
       {/* ----- PAGE'S BREADCRUMBS----- */}
       <Breadcrumbs 
         items={[
           { label: 'Home', path: '/' }
         ]} 
-        currentPage="Detection Tool" 
+        currentPage="Your Voice!" 
       />
       {/* ---PAGE'S TITLE & OVERVIEW  */}
-      <Heading textAlign="center" p="2rem">Your Voice!</Heading>
-      <Text border="0.2rem" bgColor="yellow.100" p="0.5rem">
+      <Heading textAlign="center" p="0.7rem">Your Voice!</Heading>
+      <Text mt="0.5rem">
         At Melanoma Equity, we believe that every voice matters and that sharing experiences and insights can make a significant impact in the fight against skin cancer. This space is designed to gather your feedback about our website and to collect images or stories related to skin cancer. Your contributions will help us improve our resources and build a diverse and comprehensive database to better understand and combat skin cancer.     
       </Text>
 

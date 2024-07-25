@@ -2,34 +2,37 @@ import React, { useState, useEffect } from 'react';
 import * as tf from '@tensorflow/tfjs';
 import * as tmImage from '@teachablemachine/image';
 import { Container, Heading, Text, Box, Input, Image, Button } from "@chakra-ui/react";
-import {Reload} from '@emotion-icons/ionicons-sharp/Reload'
-import { WarningTwoIcon } from '@chakra-ui/icons'
-
+import DetectModelInstruction from '../../assets/images/DetectModel.png';
+import { Reload } from '@emotion-icons/ionicons-sharp/Reload';
+import { WarningTwoIcon } from '@chakra-ui/icons';
 
 function DetectModel() {
     const [model, setModel] = useState(null);
     const [imageURL, setImageURL] = useState(null);
     const [labelContainer, setLabelContainer] = useState(null);
 
-
     // Function to initialize the model and setup
     async function init() {
         // the path to the model's files 
-        const URL = "./my_model/";
+        const URL = process.env.PUBLIC_URL + "/my_model/";
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
 
-        // Load the model and metadata using fucntion tmImage.load() from Google TM
-        // retrieve the number of classes: benign mole vs malignant mole
-        const loadedModel = await tmImage.load(modelURL, metadataURL);
-        setModel(loadedModel);
+        try {
+            // Load the model and metadata using fucntion tmImage.load() from Google TM
+            // retrieve the number of classes: benign mole vs malignant mole
+            const loadedModel = await tmImage.load(modelURL, metadataURL);
+            setModel(loadedModel);
 
-        // Create label container
-        const container = document.getElementById("label-container");
-        for (let i = 0; i < loadedModel.getTotalClasses(); i++) {
-            container.appendChild(document.createElement("div"));
+            // Create label container
+            const container = document.getElementById("label-container");
+            for (let i = 0; i < loadedModel.getTotalClasses(); i++) {
+                container.appendChild(document.createElement("div"));
+            }
+            setLabelContainer(container);
+        } catch (error) {
+            console.error("Failed to load model:", error);
         }
-        setLabelContainer(container);
     }
 
     // Function to handle file input and make predictions
@@ -71,9 +74,8 @@ function DetectModel() {
 
             }
         };
-        }
+    }
 
-    // Initialize the model when the component mounts
     useEffect(() => {
         init();
     }, []);
@@ -85,40 +87,19 @@ function DetectModel() {
 
 
     return (
-        <Box
-            width="fit-content"
-            bgColor="yellow.200"
-            p="3rem"
-            borderRadius="50"
-            mb="2rem"
-        >
+        <Box width="fit-content" bgColor="yellow.200" p="3rem" borderRadius="50" mb="2rem">
             <Heading as="h1" mb={4}>Melanoma Detection Tool</Heading>
             <Text><WarningTwoIcon color="red.500"/> While this tool offers valuable support for early detection, it does not replace professional medical advice. Always consult a healthcare provider for any concerns about your skin health.</Text>
-            <Text p="0.5rem">
-            <WarningTwoIcon color="red.500"/>The detection tool is currently optimized for skin tones I to IV on the Fitzpatrick scale. Due to limited data, it is not accurate for assessing moles on darker skin tones (V and VI). However, everyone can benefit from the first two steps of this page: self-examination and capturing accurate photos of moles!
-            </Text>
-            <Text mb={4}>Upload an image of a mole to get an assessment.</Text>
+            {/* <Text p="0.5rem">
+                <WarningTwoIcon color="red.500"/> The detection tool is currently optimized for skin tones I to IV on the Fitzpatrick scale. Due to limited data, it is not accurate for assessing moles on darker skin tones (V and VI). However, everyone can benefit from the first two steps of this page: self-examination and capturing accurate photos of moles!
+            </Text> */}
+            <Text mb={4}>Instruction: Take close-up picture of the mole/spot. Upload the image to get an assessment.</Text>
+            <Image src={DetectModelInstruction} width="60%" marginLeft="auto"marginRight="auto"/>
             <Box display="flex" flexDirection="column" alignItems="center">
                 {!imageURL && (
                     <>
-                        <Input
-                            id="file-input"
-                            type="file"
-                            accept="image/*"
-                            onChange={handleFileSelect}
-                            display="none"
-                        />
-                        <Button
-                            as="label"
-                            htmlFor="file-input"
-                            background="teal"
-                            color="white"
-                            padding="8px 16px"
-                            borderRadius="4px"
-                            cursor="pointer"
-                            mb={4}
-                            _hover={{ background: "darkslategray" }}
-                        >
+                        <Input id="file-input" type="file" accept="image/*" onChange={handleFileSelect} display="none" />
+                        <Button as="label" htmlFor="file-input" background="teal" color="white" padding="8px 16px" borderRadius="4px" cursor="pointer" mb={4} _hover={{ background: "darkslategray" }}>
                             Upload Image
                         </Button>
                     </>
@@ -126,16 +107,7 @@ function DetectModel() {
                 {imageURL && (
                     <>
                         <Image src={imageURL} alt="Uploaded preview" maxWidth="100%" height="15rem" />
-                        <Button
-                            onClick={handleTryAgain}
-                            background="teal"
-                            color="white"
-                            padding="8px 16px"
-                            borderRadius="4px"
-                            cursor="pointer"
-                            mt={4}
-                            _hover={{ background: "darkslategray" }}
-                        >
+                        <Button onClick={handleTryAgain} background="teal" color="white" padding="8px 16px" borderRadius="4px" cursor="pointer" mt={4} _hover={{ background: "darkslategray" }}>
                             <Box as={Reload} size="24" color="white" mr={2} />
                             Try Again
                         </Button>

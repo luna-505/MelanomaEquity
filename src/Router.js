@@ -8,11 +8,14 @@ import Prevention from './pages/AboutMelanoma/subpages/Prevention';
 import Statistics from './pages/AboutMelanoma/subpages/Statistics';
 import Sunscreen from './pages/AboutMelanoma/subpages/Sunscreen';
 import Detection from './pages/Detection/Detection'; 
-import Resources from './pages/Resources/Resources'; 
 import YourVoice from './pages/YourVoice/YourVoice'; 
 import FeedbackForm from './pages/YourVoice/FeedbackForm';
 import ImageSubmissionForm from './pages/YourVoice/ImageSubmissionForm';
+import RiskFactors from './pages/AboutMelanoma/subpages/RiskFactors';
+import SelfExaminationGuide from './pages/Detection/SelfExaminationGuide';
+import DetectModel from './pages/Detection/TeachableMachine';
 import Error404 from './components/UI/Error404';
+import { TeachableMobileNet } from '@teachablemachine/image';
 
 // Router function to define which component to render according to link path
 // lowercase letter + hyphens for link name is common convention 
@@ -27,9 +30,13 @@ const Router = () =>
                 <Route path='/about-melanoma/prevention' element={<Prevention />} />
                 <Route path='/about-melanoma/statistics' element={<Statistics />} />
                 <Route path='/about-melanoma/how-to-wear-sunscreen' element={<Sunscreen />} />
+                <Route path='/about-melanoma/risk-factors' element={<RiskFactors />} />
 
-                <Route path='/detection' element={<Detection />}/>
-                <Route path='/resources' element={<Resources />}/>
+
+                <Route path='/detection' element={<Detection />}>
+                    <Route path='self-examination-guide' element={<SelfExaminationGuide />} /> 
+                    <Route path='detect-machine' element={<DetectModel />} /> 
+                </Route>
                 <Route path='/your-voice' element={<YourVoice />}>
                     <Route path='feedback-form' element={<FeedbackForm/>} />
                     <Route path='image-submission-form' element={<ImageSubmissionForm/>} />

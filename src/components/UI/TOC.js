@@ -1,19 +1,19 @@
 import React from 'react';
-import { List, ListItem, Link, Heading } from '@chakra-ui/react';
+import {HStack, Box, Link, StackDivider} from '@chakra-ui/react'
 
+// Table of Contents component, show sections of the page in horizontal stack
 const TableOfContents = ({ sections }) => {
   return (
     <nav>
-      <Heading size="sm" mb="2">What you will find on this page:</Heading>
-      <List spacing={2}>
+      <HStack spacing={2} divider={<StackDivider borderColor='gray.200' />}>
         {sections.map((section, index) => (
-          <ListItem key={index}>
+          <Box key={index}>
             <Link href={`#${section.id}`} color="teal.500">
-              {index + 1}. {section.title}
+            {section.title}
             </Link>
-          </ListItem>
+          </Box>
         ))}
-      </List>
+      </HStack>
     </nav>
   );
 };

@@ -14,7 +14,7 @@ const navItems = [
 function HorizontalNavBar() {
   return (
     <Flex as="nav" 
-      bg="blue.500"
+      bg="#382c6e"
       width="100%" 
       backdropFilter="blur(4rem)" 
       boxShadow="0 0 4rem rgba(0, 0, 0, 0.2)">
