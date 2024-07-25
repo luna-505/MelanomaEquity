@@ -63,15 +63,15 @@ const cardItems = [
 
 function AboutMelanoma() {
   return (
-    <Container maxWidth="7xl" as="main">
+    <Container maxWidth="4xl" as="main">
     <Breadcrumbs 
       items={[
           { label: 'Home', path: '/' }
       ]} 
       currentPage="All About Melanoma" 
     />
-      <Heading textAlign="center" p="2rem">All the information you need</Heading>
-      <SimpleGrid m="3rem" spacing={7} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+      <Heading textAlign="center" mt="3rem">All the information you need</Heading>
+      <SimpleGrid mt="3rem" spacing={7} templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
         
         {cardItems.map((item, index) => (
           <NavLink to={item.path} key={index}>

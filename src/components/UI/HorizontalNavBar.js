@@ -5,9 +5,9 @@ import {ChevronDownIcon} from '@chakra-ui/icons';
 
 // Link path to use map funciton 
 const navItems = [
+  { path: '/', label: 'Home' },
   { path: '/about-melanoma', label: 'All About Melanoma' },
   { path: '/detection', label: 'Detection Tools' },
-  { path: '/resources', label: 'Resources' },
   { path: '/your-voice', label: 'Your Voice!' },
 ];
 

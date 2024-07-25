@@ -1,5 +1,7 @@
 import React from "react";
+// import Chakra UI components
 import { Container, Heading, Text, Box, Button, Flex } from "@chakra-ui/react";
+// import  UI components
 import { NavLink, Outlet } from "react-router-dom";
 import Breadcrumbs from "../../components/UI/Breadcrumbs";
 import TableOfContents from "../../components/UI/TOC";
@@ -12,6 +14,13 @@ function Detection() {
 
   return (
     <Container maxWidth="4xl" as="main" lineHeight="2">
+      {/* ----- PAGE'S BREADCRUMBS----- */}
+      <Breadcrumbs 
+        items={[
+          { label: 'Home', path: '/' }
+      ]} 
+        currentPage="Detection Tools" 
+      />
       {/* PAGE'S TITLE & OVERVIEW */}
       <Heading as="h1" textAlign="center" p="0.7rem">Detection Tool</Heading>
       <Text mt="0.5rem">

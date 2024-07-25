@@ -39,12 +39,12 @@ function Footer(){
                         >
                         {/* All About Melanoma & Detection Tool */}
                         <Box display="flex" flexDirection="column" alignItems="center">
+                            <ListItem _hover={{color: 'blue.400'}}><NavLink to="/">Home</NavLink></ListItem>
                             <ListItem _hover={{color: 'blue.400'}}><NavLink to="about-melanoma">All About Melanoma</NavLink></ListItem>
-                            <ListItem _hover={{color: 'blue.400'}}><NavLink to="detection">Detection Tool</NavLink></ListItem>
                         </Box>
                         {/* Resouces & Your Voice! */}
                         <Box display="flex" flexDirection="column" alignItems="center">
-                            <ListItem _hover={{color: 'blue.400'}}><NavLink to="resources">Resources</NavLink></ListItem>
+                            <ListItem _hover={{color: 'blue.400'}}><NavLink to="detection">Detection Tool</NavLink></ListItem>
                             <ListItem _hover={{color: 'blue.400'}}><NavLink to="your-voice">Your Voice!</NavLink></ListItem>
                         </Box>
                     </List>

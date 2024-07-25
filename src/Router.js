@@ -15,7 +15,6 @@ import RiskFactors from './pages/AboutMelanoma/subpages/RiskFactors';
 import SelfExaminationGuide from './pages/Detection/SelfExaminationGuide';
 import DetectModel from './pages/Detection/TeachableMachine';
 import Error404 from './components/UI/Error404';
-import { TeachableMobileNet } from '@teachablemachine/image';
 
 // Router function to define which component to render according to link path
 // lowercase letter + hyphens for link name is common convention 

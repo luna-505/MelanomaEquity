@@ -87,42 +87,10 @@ function SideNavBar() {
           {/* Menu List containter */}
           <DrawerBody padding="3rem" marginTop="5rem" color="white">
           <VStack spacing="2.5rem">
-            {/* All About Melanoma Links */}
-            <Box >
-            <Accordion allowToggle>
-                <AccordionItem border="0">
-                  {/* ALL about melanoma dropdown link button */}
-                    <AccordionButton pb={0.4}>
-                      <Box textAlign='left'>
-                        All About Melanoma
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  {/* All about melanoma link list */}
-                  <AccordionPanel>
-                  <VStack spacing="1rem"  align="start">
-                    {/* What is it? */}
-                    <Box color="white" _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}>
-                      <NavLink to="/about-melanoma"onClick={onClose}>View All</NavLink>
-                    </Box>
-                    <Box color="white" _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}>
-                      <NavLink to="/detection"onClick={onClose}>What is it?</NavLink>
-                    </Box>
-                    {/* Risk factors */}
-                    <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}>
-                      <NavLink to="/resources" onClick={onClose}>Risk factors & Statistic</NavLink>
-                    </Box>
-                    <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}>
-                      <NavLink to="/your-voice" onClick={onClose}>Prevention</NavLink>
-                    </Box>  
-                  </VStack>
-                  </AccordionPanel>
-                </AccordionItem>    
-              </Accordion> 
-            </Box> 
             {/* Other page links */}
+            <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/" onClick={onClose}>Home</NavLink></Box>
+            <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/about-melanoma" onClick={onClose}>All About Melanoma</NavLink></Box>
             <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/detection" onClick={onClose}>Detection Tools</NavLink></Box>
-            <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/resources" onClick={onClose}>Resources</NavLink></Box>
             <Box _hover={{ color: "blue.300" }} _active={{ color: "blue.400" }}><NavLink to="/your-voice" onClick={onClose}>Your Voice!</NavLink></Box>   
           </VStack>  
           </DrawerBody>
