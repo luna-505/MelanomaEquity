@@ -4,7 +4,7 @@ A web app built for the **Kode with Klossy x Deloitte 2024 Health Equity Competi
 
 **[Live demo](https://luna-505.github.io/MelanomaEquity)**
 
-<img src="docs/demo.gif" alt="Demo of uploading a mole image and getting a result" width="400">
+<img src="docs/Demo.gif" alt="Demo of uploading a mole image and getting a result" width="400">
 
 > ⚠️ **Disclaimer:** This is an educational project and not a medical tool. 
 
