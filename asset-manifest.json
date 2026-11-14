@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/MelanomaEquity/static/js/main.b199868d.js",
+    "main.js": "/MelanomaEquity/static/js/main.0a2eafed.js",
     "static/media/ABCDEList.png": "/MelanomaEquity/static/media/ABCDEList.dfa179286a0943c51575.png",
     "static/media/RiskFactors.png": "/MelanomaEquity/static/media/RiskFactors.5a58ed6cef85785c378d.png",
     "static/media/Prevention.png": "/MelanomaEquity/static/media/Prevention.f25d38bc7f954cbb2b00.png",
@@ -20,9 +20,9 @@
     "static/media/IconDetect.png": "/MelanomaEquity/static/media/IconDetect.ec264a7d559e52352f12.png",
     "static/media/IconVoice.png": "/MelanomaEquity/static/media/IconVoice.d1c06753c19532ea4982.png",
     "index.html": "/MelanomaEquity/index.html",
-    "main.b199868d.js.map": "/MelanomaEquity/static/js/main.b199868d.js.map"
+    "main.0a2eafed.js.map": "/MelanomaEquity/static/js/main.0a2eafed.js.map"
   },
   "entrypoints": [
-    "static/js/main.b199868d.js"
+    "static/js/main.0a2eafed.js"
   ]
 }
