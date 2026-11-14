@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/MelanomaEquity/static/js/main.b859cce5.js",
+    "static/media/ABCDEList.png": "/MelanomaEquity/static/media/ABCDEList.dfa179286a0943c51575.png",
+    "static/media/RiskFactors.png": "/MelanomaEquity/static/media/RiskFactors.5a58ed6cef85785c378d.png",
+    "static/media/Prevention.png": "/MelanomaEquity/static/media/Prevention.f25d38bc7f954cbb2b00.png",
+    "static/media/WhatIsMelanoma.png": "/MelanomaEquity/static/media/WhatIsMelanoma.84860bf41ede53bda0c9.png",
+    "static/media/Suncream.png": "/MelanomaEquity/static/media/Suncream.af031ec18f2563d5d2c2.png",
+    "static/media/FactsMyths.png": "/MelanomaEquity/static/media/FactsMyths.e2aa7127f13744aac847.png",
+    "static/media/BasalCell.jpg": "/MelanomaEquity/static/media/BasalCell.694cb37b3b10aa8e6021.jpg",
+    "static/media/Melanocyte.jpeg": "/MelanomaEquity/static/media/Melanocyte.bca9b301a356990f4067.jpeg",
+    "static/media/melanoma01.jpg": "/MelanomaEquity/static/media/melanoma01.7981d36f13978191ca18.jpg",
+    "static/media/BodyCheckList.png": "/MelanomaEquity/static/media/BodyCheckList.acb42882cfc5b66c0208.png",
+    "static/media/Logo.png": "/MelanomaEquity/static/media/Logo.852112a71530aaa51598.png",
+    "static/media/SquamousCell.jpg": "/MelanomaEquity/static/media/SquamousCell.f202d7bc2326deebcd97.jpg",
+    "static/media/ABCDEList2.png": "/MelanomaEquity/static/media/ABCDEList2.385f28ca5e84d6a2b2db.png",
+    "static/media/SunBg.png": "/MelanomaEquity/static/media/SunBg.4f25e12362a22f1fffce.png",
+    "static/media/DetectModel.png": "/MelanomaEquity/static/media/DetectModel.7b37930cc33aceb14ada.png",
+    "static/media/IconInfo.png": "/MelanomaEquity/static/media/IconInfo.a126ff9e125a225bdfc7.png",
+    "static/media/IconDetect.png": "/MelanomaEquity/static/media/IconDetect.ec264a7d559e52352f12.png",
+    "static/media/IconVoice.png": "/MelanomaEquity/static/media/IconVoice.d1c06753c19532ea4982.png",
+    "index.html": "/MelanomaEquity/index.html",
+    "main.b859cce5.js.map": "/MelanomaEquity/static/js/main.b859cce5.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b859cce5.js"
+  ]
+}
