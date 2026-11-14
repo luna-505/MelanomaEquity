@@ -15,11 +15,8 @@ function Footer(){
                 gap="5%" ml="10%" mr="10%" pt="2%" 
                 justifyContent="space-around" 
                 alignItems="center">
-                {/* Logo and Name section  */}
+                {/* Logo */}
                 <Box display="flex" flexDirection="column">
-                    {/* Website Name */}
-                    {/* <Text fontSize="xl" letterSpacing="widest" fontWeight="bold" textAlign="center">Melanoma Equity</Text> */}
-                    {/* Website Logo */}
                     <Image 
                         src={Logo}
                         alt="Logo"

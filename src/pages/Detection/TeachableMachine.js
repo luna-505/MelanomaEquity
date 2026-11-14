@@ -13,7 +13,7 @@ function DetectModel() {
 
     // Function to initialize the model and setup
     async function init() {
-        // the path to the model's files 
+
         const URL = process.env.PUBLIC_URL + "/my_model/";
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
@@ -37,19 +37,13 @@ function DetectModel() {
 
     // Function to handle file input and make predictions
     async function handleFileSelect(event) {
-        // get the first file from the files input
         const file = event.target.files[0];
-        // create a new image element
         const img = document.createElement('img');
-        // create a temporary URL for the file 
-        img.src = URL.createObjectURL(file);
-        setImageURL(img.src); // Set the image URL to state
+        img.src = URL.createObjectURL(file);  // create a temporary URL for the file 
+        setImageURL(img.src); 
 
-        // when the image is fully loaded, trigger this function
         img.onload = async () => {
-            // check if the model is loaded
             if (model) {
-                // make prediction
                 const prediction = await model.predict(img);
                 // Find the prediction with the highest probability
                 let highestPrediction = prediction[0];

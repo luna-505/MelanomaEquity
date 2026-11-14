@@ -1,8 +1,6 @@
 import React from 'react';
 import { Box, Heading, List, ListItem, Text, Divider } from '@chakra-ui/react';
 
-// Reference list component, include a sup and the reference
-// <sup><a href='#ref-4'>4</a></sup>
 const Reference = ({ references }) => {
   return (
     <Box as="section" mt="1rem" mb="2rem">

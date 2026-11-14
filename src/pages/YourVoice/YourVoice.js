@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Box, Container, Heading, Text, Button, IconButton } from "@chakra-ui/react";
 import Breadcrumbs from "../../components/UI/Breadcrumbs";
 import { ArrowBackIcon } from '@chakra-ui/icons';
-import FeedbackForm from './FeedbackForm'; // Adjust the import path as needed
-import ImageSubmissionForm from './ImageSubmissionForm'; // Adjust the import path as needed
+import FeedbackForm from './FeedbackForm'; 
+import ImageSubmissionForm from './ImageSubmissionForm'; 
 
 function YourVoice() {
   const [selectedForm, setSelectedForm] = useState(null);
